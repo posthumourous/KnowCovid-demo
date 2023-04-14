@@ -1,8 +1,8 @@
 FROM mizzouceri/tomcat-mvn-java11:V1
-MAINTAINER Songjie Wang "wangso@missouri.edu"
+MAINTAINER Alicia Esquivel "ace6qv@mail.missouri.edu"
 
-RUN apt-get -y update && apt-get -y install lsb-release && apt-get install net-tools nano
-RUN apt-get -y install default-mysql-server maven
+#RUN apt-get -y update && apt-get -y install lsb-release && apt-get install net-tools nano
+RUN sudo yum install default-mysql-server maven
 WORKDIR /root 
 ADD Covid19-website /root/Covid19-website
 WORKDIR /root/Covid19-website
